@@ -86,7 +86,7 @@ adapters = {
     --
     -- -- Default: function that checks for sail presence.
     -- --      - If no sail: Numbered file in randomized /tmp/ directory (using async.fn.tempname())
-    -- --      - If sail: "storage/app/" .. os.date("junit-%Y%m%d-%H%M%S")
+    -- --      - If sail: "storage/app/" .. os.date("pest-%Y%m%d-%H%M%S")
     results_path = function() "/some/accessible/path" end,
   }),
 }
