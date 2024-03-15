@@ -2,17 +2,19 @@
 
 This plugin provides a [Pest](https://pestphp.com) adapter for the [Neotest](https://github.com/nvim-neotest/neotest) framework.
 
-This is a fork of `neotest-pest` originally by [@theutz](https://github.com/theutz/neotest-pest), with some fixes and updates:
+It is a fork of `neotest-pest` originally created by [@theutz](https://github.com/theutz/neotest-pest),
+with some fixes and updates:
 
-- Updated to work with [Pest](https://pestphp.com) 2.0
-- Support for (and automatic detection of) Laravel Sail
-  - Note: This also moves junit output files into `storage/app/`
-- Support for running in Docker (custom docker compose)
-- Parallel testing support
+- Updated to be compatible with [Pest](https://pestphp.com) 2.0
+- Includes support for automatic detection of Laravel Sail
+  - Note: Junit output files are now moved to `storage/app/`
+- Includes support for running in Docker with custom docker compose
+- Supports parallel testing
 
 > [!WARNING]
-> _Ive only focused on making this work for me.
-> Please test against your Pest tests_
+> I have only focused on making this work for me. 
+> Please test it against your Pest tests.
+
 ## :package: Installation
 
 Install the plugin using your favorite package manager.
@@ -86,7 +88,7 @@ adapters = {
     --
     -- -- Default: function that checks for sail presence.
     -- --      - If no sail: Numbered file in randomized /tmp/ directory (using async.fn.tempname())
-    -- --      - If sail: "storage/app/" .. os.date("pest-%Y%m%d-%H%M%S")
+    -- --      - If sail: "storage/app/" .. os.date("Pest.%Y%m%d-%H%M%S")
     results_path = function() "/some/accessible/path" end,
   }),
 }
